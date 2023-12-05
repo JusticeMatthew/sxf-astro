@@ -1,0 +1,21 @@
+---
+import Header from '@/components/Header.jsx';
+import StarsComposition from '@/components/StarsComposition.jsx';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.svg?" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+
+  <body class="font-gothic bg-gray-500">
+    <Header client:load />
+    <StarsComposition client:idle />
+    <div id="container" class="overflow-x-hidden">
+      <slot />
+    </div>
+  </body>
+</html>
